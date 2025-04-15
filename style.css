@@ -96,15 +96,18 @@ a {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: start;
+    margin-bottom: 20px;
   }
   .card-headline {
     width: 100%;
   }
   .card-image,
   .card-standfirst {
-    width: 50%;
+    width: 40%;
   }
   #card-container {
+    margin-left: 15%;
+    margin-right: 15%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
@@ -113,7 +116,13 @@ a {
     grid-row: span 2;
   }
   .card:nth-child(1) .card-image {
-    max-width: 400px;
+    max-width: 300px;
+  }
+  .card:nth-child(1) .seperator {
+    margin-top: auto;
+  }
+  .card .seperator {
+    margin-top: auto;
   }
   .card:nth-child(1) .card-standfirst {
     display: none;

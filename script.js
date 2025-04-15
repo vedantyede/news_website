@@ -1,9 +1,11 @@
 async function fetchData() {
-  let res = await fetch("./data.json");
-  let data = await res.json();
-  console.log(data);
-  console.log(data.articles);
-  showData(data);
+  try {
+    let res = await fetch("./data.json");
+    let data = await res.json();
+    showData(data);
+  } catch (err) {
+    console.log("Error: ", err);
+  }
 }
 
 function showData(data) {
